@@ -1,0 +1,24 @@
+[package]
+name = "dataclasses_derive"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+
+[dependencies]
+schemars = "0.8"
+schemafy = "0.6"
+serde = { version = "1", features = ["derive"]}
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+anyhow = "1.0"
+
+syn = {version = "1", features = ["default", "printing", "parsing", "full", "derive"] }
+syn-serde = { version = "0.2", features = ["json"] }
+quote = "1.0"
+Inflector = "0.11"
+serde-value = "0.7"
+codegen = "*"
